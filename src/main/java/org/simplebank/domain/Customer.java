@@ -1,24 +1,30 @@
 package org.simplebank.domain;
 
-import lombok.AllArgsConstructor;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Customer {
-    public Customer() {
-    }
+
     @Id
     @GeneratedValue
+    @Column(name = "customer_id")
     private Integer id;
 
     private String name;
+
     private String address;
+
     private String phone;
+
     private Boolean verified;
+
+    @OneToOne(mappedBy="customer", cascade = CascadeType.ALL)
+    private Account account;
 
 
 

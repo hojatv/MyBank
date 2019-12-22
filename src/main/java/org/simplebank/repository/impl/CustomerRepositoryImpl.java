@@ -5,8 +5,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.simplebank.domain.Customer;
 import org.simplebank.exception.CustomerException;
-import org.simplebank.common.HibernateUtil;
 import org.simplebank.repository.CustomerRepository;
+import org.simplebank.repository.HibernateH2SessionFactory;
+import org.simplebank.repository.RepositorySessionFactory;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
@@ -16,9 +17,10 @@ import java.util.List;
 public class CustomerRepositoryImpl implements CustomerRepository {
     private final SessionFactory sessionFactory;
     private static final Logger log = Logger.getLogger(CustomerRepositoryImpl.class);
+    private final RepositorySessionFactory hibernateH2SessionFactory = new HibernateH2SessionFactory();
 
     public CustomerRepositoryImpl() {
-        sessionFactory = HibernateUtil.getSessionFactory();
+        sessionFactory = hibernateH2SessionFactory.getSessionFactory();
     }
 
     @Override

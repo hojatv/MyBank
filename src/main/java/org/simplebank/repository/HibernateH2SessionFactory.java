@@ -1,4 +1,4 @@
-package org.simplebank.common;
+package org.simplebank.repository;
 
 import java.util.Properties;
 
@@ -14,11 +14,11 @@ import org.simplebank.domain.Customer;
 
 import static org.simplebank.common.Configs.getProperty;
 
-public class HibernateUtil {
-    private static Logger log = Logger.getLogger(HibernateUtil.class);
-    private static SessionFactory sessionFactory;
+public class HibernateH2SessionFactory implements RepositorySessionFactory {
+    private static Logger log = Logger.getLogger(HibernateH2SessionFactory.class);
+    private SessionFactory sessionFactory;
 
-    public static SessionFactory getSessionFactory() {
+    public SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
                 Properties settings = new Properties();
@@ -42,5 +42,10 @@ public class HibernateUtil {
             }
         }
         return sessionFactory;
+    }
+
+    @Override
+    public void populateData() {
+
     }
 }

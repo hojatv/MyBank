@@ -6,14 +6,14 @@ public enum Currency {
     JPY("JPY"),
     GPD("GPD");
 
-    Currency(String currency) {
-        this.currency = currency;
+    Currency(String currencyName) {
+        this.currencyName = currencyName;
     }
 
-    private String currency;
+    private String currencyName;
 
-    public String getCurrency() {
-        return currency;
+    public String getCurrencyName() {
+        return currencyName;
     }
 
 }

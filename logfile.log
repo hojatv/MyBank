@@ -1,0 +1,20 @@
+2019-12-23 01:11:27 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2019-12-23 01:11:27 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2019-12-23 01:11:27 INFO  org.simplebank.common.Configs     - loadConfig(): Loading config file: application.properties
+2019-12-23 01:11:27 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-12-23 01:11:27 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2019-12-23 01:11:27 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2019-12-23 01:11:27 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2019-12-23 01:11:27 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2019-12-23 01:11:27 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2019-12-23 01:11:27 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-12-23 01:11:27 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@34997338] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-12-23 01:11:27 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2262b621] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2019-12-23 01:11:27 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5f031ebd'
+2019-12-23 01:11:27 INFO  org.eclipse.jetty.util.log     - Logging initialized @1149ms
+2019-12-23 01:11:27 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2019-12-23 01:11:27 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2019-12-23 01:11:27 INFO  org.eclipse.jetty.server.Server     - jetty-9.3.6.v20151106
+2019-12-23 01:11:27 INFO  org.eclipse.jetty.server.ServerConnector     - Started ServerConnector@7d0bbbb{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2019-12-23 01:11:27 INFO  org.eclipse.jetty.server.Server     - Started @1210ms
+2019-12-23 01:12:04 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory

@@ -12,6 +12,9 @@ import java.util.Collection;
 import static org.simplebank.common.Configs.getProperty;
 import static spark.Spark.get;
 
+/**
+ * Demo implementation of Mybank using Spark
+ */
 public class MybankApiImpl implements MybankApi {
 
     private final CustomerService customerService;
