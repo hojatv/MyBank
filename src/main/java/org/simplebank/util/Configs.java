@@ -1,4 +1,4 @@
-package org.simplebank.common;
+package org.simplebank.util;
 
 import org.apache.log4j.Logger;
 

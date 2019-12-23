@@ -4,7 +4,7 @@ public enum Currency {
     EUR("EUR"),
     USD("USD"),
     JPY("JPY"),
-    GPD("GPD");
+    GBP("GBP");
 
     Currency(String currencyName) {
         this.currencyName = currencyName;

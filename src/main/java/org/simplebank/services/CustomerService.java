@@ -1,7 +1,7 @@
 package org.simplebank.services;
 
 import org.simplebank.domain.Customer;
-import org.simplebank.exception.CustomerException;
+import org.simplebank.exception.UserException;
 import org.simplebank.repository.CustomerRepository;
 import org.simplebank.repository.impl.CustomerRepositoryImpl;
 
@@ -17,7 +17,7 @@ public class CustomerService {
         customerRepository.addCustomer(customer);
     }
 
-    public Collection<Customer> getCustomers() throws CustomerException {
+    public Collection<Customer> getCustomers() throws UserException {
         return customerRepository.getCustomers();
     }
 
