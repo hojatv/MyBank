@@ -32,8 +32,9 @@ The format of the request body id like this :
     "etag": 82734923487
 }`
 
-Please note that inorder to provide correct information for this request body, you should always first get correct balance information for the source account : 
+Please note that inorder to provide correct information for this request body, you should always first get correct balance information for the source account. For example for transferring from account 1001 to 1002 : 
 http://localhost:4567/mybank/transfer-management/balance/1001
+
 
 
 ## Assumptions
