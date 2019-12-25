@@ -2,6 +2,7 @@ package org.simplebank.services;
 
 import org.simplebank.domain.Balance;
 import org.simplebank.domain.MoneyTransferDTO;
+import org.simplebank.domain.TransferDetail;
 import org.simplebank.exception.UserException;
 import org.simplebank.repository.BalanceRepository;
 import org.simplebank.repository.impl.BalanceRepositoryImpl;
@@ -15,7 +16,7 @@ public class MoneyService {
         balanceRepository = new BalanceRepositoryImpl();
     }
 
-    public boolean transfer(MoneyTransferDTO moneyTransferDTO) throws UserException {
+    public TransferDetail transfer(MoneyTransferDTO moneyTransferDTO) throws UserException {
         return balanceRepository.transfer(moneyTransferDTO);
     }
 

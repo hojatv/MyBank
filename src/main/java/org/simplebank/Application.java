@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.simplebank.controller.MybankApi;
 import org.simplebank.controller.impl.MybankApiImpl;
 import org.simplebank.repository.impl.HibernateH2SessionFactory;
+import spark.Spark;
 
 public class Application {
     private static Logger log = Logger.getLogger(HibernateH2SessionFactory.class);
@@ -22,7 +23,8 @@ public class Application {
             mybankApi.getAllCustomers();
         } catch (Exception ex) {
             log.error("\n\nProblem lunching Mybank application. More info : ", ex.getCause());
-            System.exit(0);
+            Spark.stop();
+            System.exit(100);
         }
     }
 }
