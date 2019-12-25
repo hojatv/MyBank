@@ -1,45 +1,81 @@
 package org.simplebank.controller.impl;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import org.simplebank.domain.MoneyTransferDTO;
 import org.simplebank.controller.MybankApi;
 import org.simplebank.domain.Customer;
 import org.simplebank.services.CustomerService;
-import org.simplebank.common.Response;
-import org.simplebank.common.Status;
+import org.simplebank.domain.Response;
+import org.simplebank.domain.Status;
+import org.simplebank.services.MoneyService;
 
 import java.util.Collection;
 
-import static org.simplebank.common.Configs.getProperty;
 import static spark.Spark.get;
+import static spark.Spark.post;
 
 /**
- * Demo implementation of Mybank using Spark
+ * Demo implementation of Mybank using Spark Framework
  */
 public class MybankApiImpl implements MybankApi {
 
     private final CustomerService customerService;
+    private final MoneyService moneyService;
 
     public MybankApiImpl() {
+        moneyService = new MoneyService();
         customerService = new CustomerService();
-    }
-
-    @Override
-    public void balanceHandler() {
     }
 
 
     @Override
     public void getAllCustomers() {
-        get(getProperty("getAllCustomersPath"), (request, response) -> {
+        get("/mybank/customer-management/customers", (request, response) -> {
             response.type("application/json");
             Collection<Customer> customers;
             try {
                 customers = customerService.getCustomers();
             } catch (Exception ex) {
-                return new Gson().toJson(new Response(Status.ERROR, "Problem While getting customers"));
+                return toJsonElement(new Response(Status.ERROR, "Problem While getting customers"));
 
             }
-            return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(customers)));
+            return toJsonElement(new Response(Status.SUCCESS, new Gson().toJsonTree(customers)));
         });
+    }
+
+    @Override
+    public void getBalances() {
+        get("/mybank/transfer-management/balance/:accountId", (request, response) -> {
+            response.type("application/json");
+            String accountId = request.params(":accountId");
+            try {
+                JsonElement data = toJsonElement(moneyService.getBalancesByAccountId(accountId));
+                return toJsonElement(new Response(Status.SUCCESS, data));
+            } catch (Exception ex) {
+                return toJsonElement(new Response(Status.ERROR, "Problem While getting balance list for account  : "
+                        + accountId + " . More info: " + ex.getMessage()));
+            }
+        });
+    }
+
+    @Override
+    public void transferMoney() {
+        post("/mybank/transfer-management/transfer", (request, response) -> {
+            response.type("application/json");
+            MoneyTransferDTO moneyTransferDTO = null;
+            try {
+                moneyTransferDTO = new Gson().fromJson(request.body(), MoneyTransferDTO.class);
+                boolean transferred = moneyService.transfer(moneyTransferDTO);
+                return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(transferred)));
+            } catch (Exception ex) {
+                return toJsonElement(new Response(Status.ERROR, "Problem While transferring money. More info: ")
+                        + ex.getMessage());
+            }
+        });
+    }
+
+    private JsonElement toJsonElement(Object response) {
+        return new Gson().toJsonTree(response);
     }
 }

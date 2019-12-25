@@ -16,7 +16,7 @@ public class Account {
     @Id
     @GeneratedValue
     @Column(name = "account_id")
-    private long id;
+    private Integer id;
 
     private String sourceIBAN;
 
@@ -25,8 +25,5 @@ public class Account {
     @JoinColumn(name = "customer_id")
     @OneToOne(cascade = CascadeType.ALL)
     private Customer customer;
-
-    @OneToMany(mappedBy="account", cascade = CascadeType.ALL)
-    private List<Balance> balances;
 
 }

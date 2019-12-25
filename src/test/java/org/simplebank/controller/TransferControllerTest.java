@@ -11,12 +11,12 @@ import org.simplebank.domain.Account;
 import org.simplebank.domain.Balance;
 import org.simplebank.domain.Customer;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
-import static org.simplebank.common.Configs.getProperty;
+
+import static org.simplebank.domain.Currency.GBP;
+import static org.simplebank.util.Configs.getProperty;
 import static org.simplebank.domain.Currency.EUR;
-import static org.simplebank.domain.Currency.USD;
 
 
 public class TransferControllerTest {
@@ -66,10 +66,19 @@ public class TransferControllerTest {
         Customer customer = new Customer();
         customer.setName("Reza");
         customer.setPhone("+49152211221");
+        session.saveOrUpdate(customer);
         account.setCustomer(customer);
+        session.saveOrUpdate(account);
 
         balance1.setAccount(account);
         session.saveOrUpdate(balance1);
+
+        Balance balance2 = new Balance();
+        balance2.setAmount(10.F);
+        balance2.setCurrency(GBP);
+        balance2.setETag(System.nanoTime());
+        balance2.setAccount(account);
+        session.saveOrUpdate(balance2);
 
         session.getTransaction().commit();
 

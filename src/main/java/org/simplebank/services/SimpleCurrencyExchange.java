@@ -1,6 +1,6 @@
 package org.simplebank.services;
 
-import org.simplebank.common.Configs;
+import org.simplebank.util.Configs;
 import org.simplebank.domain.Currency;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 

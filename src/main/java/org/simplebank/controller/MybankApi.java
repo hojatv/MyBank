@@ -2,5 +2,6 @@ package org.simplebank.controller;
 
 public interface MybankApi {
     public void getAllCustomers();
-    public void balanceHandler();
+    public void getBalances();
+    public void transferMoney();
 }

@@ -1,4 +1,4 @@
-package org.simplebank.common;
+package org.simplebank.domain;
 
 public enum Status {
     SUCCESS("Success"), ERROR("Error");

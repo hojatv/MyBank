@@ -4,9 +4,8 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.simplebank.domain.Customer;
-import org.simplebank.exception.CustomerException;
+import org.simplebank.exception.UserException;
 import org.simplebank.repository.CustomerRepository;
-import org.simplebank.repository.HibernateH2SessionFactory;
 import org.simplebank.repository.RepositorySessionFactory;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -24,15 +23,14 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
-    public Collection<Customer> getCustomers() throws CustomerException {
+    public Collection<Customer> getCustomers() throws UserException {
         Session session = sessionFactory.openSession();
         List<Customer> customers = new ArrayList<>();
         try {
             customers = session.createQuery("FROM Customer").list();
-
         } catch (Exception ex) {
             log.error(ex.getMessage());
-            throw new CustomerException("Problem getting all customers info");
+            throw new UserException("Problem getting all customers info");
         } finally {
             session.close();
         }
