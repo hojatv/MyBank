@@ -11,15 +11,15 @@ This project currently focuses more on transferring money logic and it is not fu
 
 Here is the list of some working endpoints: 
 
-###Getting balance for an accountId:
+#### Getting balance for an accountId:
 
 (GET) http://localhost:4567/mybank/transfer-management/balance/:accountId  
 _(existing accountIds 1001..1004)_
 
-###Getting all customers information : 
+#### Getting all customers information : 
 (GET) http://localhost:4567/mybank/customer-management/customers  
 
-###Transferring money from one account to another
+#### Transferring money from one account to another
 
 (POST) http://localhost:4567/mybank/transfer-management/transfer
 The format of the request body id like this : 
@@ -37,13 +37,13 @@ http://localhost:4567/mybank/transfer-management/balance/1001
 
 ## Assumptions
 
-* **It is assumed that the sender and receiver are already our bank customers.**
+* It is assumed that the sender and receiver are already our bank customers.**
 
-* **If sender wants to send some amount in some specific currency, he should have enough balance in that currency. It means trying to transfer 1 GBP while sender has 1000 Euro Balance (and not any money in GBP) will fail.**
+* If sender wants to send some amount in some specific currency, he should have enough balance in that currency. It means trying to transfer 1 GBP while sender has 1000 Euro Balance (and not any money in GBP) will fail.**
 
-* **Currency exchanging is not happening implicitly. For creating balance in some currency you should use exchange endpoint ( will be implemented soon :) ).**
+* Currency exchanging is not happening implicitly. For creating balance in some currency you should use exchange endpoint ( will be implemented soon :) ).**
 
-* **Receiver will receive money in a currency only if he has some balance in that currency. It means receiver also can put constraint on transaction and avoid receiving money in currencies he doesn't like.**
+* Receiver will receive money in a currency only if he has some balance in that currency. It means receiver also can put constraint on transaction and avoid receiving money in currencies he doesn't like.**
 
 ## Built With
 
