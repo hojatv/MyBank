@@ -22,6 +22,7 @@ _(existing accountIds 1001..1004)_
 #### Transferring money from one account to another
 
 (POST) http://localhost:4567/mybank/transfer-management/transfer
+
 The format of the request body id like this : 
 `{
     "sourceAccountId" : 1001,
