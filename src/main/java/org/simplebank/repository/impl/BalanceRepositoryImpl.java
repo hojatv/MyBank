@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.simplebank.domain.Balance;
 import org.simplebank.domain.MoneyTransferDTO;
+import org.simplebank.domain.TransferDetail;
 import org.simplebank.exception.UserException;
 import org.simplebank.repository.BalanceRepository;
 import org.simplebank.repository.RepositorySessionFactory;
@@ -13,6 +14,8 @@ import org.simplebank.repository.RepositorySessionFactory;
 import java.util.List;
 
 import static java.util.Objects.nonNull;
+import static org.simplebank.domain.Status.ERROR;
+import static org.simplebank.domain.Status.SUCCESS;
 
 public class BalanceRepositoryImpl implements BalanceRepository {
     private final SessionFactory sessionFactory;
@@ -41,19 +44,19 @@ public class BalanceRepositoryImpl implements BalanceRepository {
     }
 
     @Override
-    public boolean transfer(MoneyTransferDTO moneyTransferDTO) throws UserException {
+    public synchronized TransferDetail transfer(MoneyTransferDTO moneyTransferDTO) {
         Session session = sessionFactory.openSession();
         boolean committed = false;
         try {
             session.beginTransaction();
-            Balance source = checkAndFindSender(session, moneyTransferDTO);
+            Balance source = evaluateSender(session, moneyTransferDTO);
 
             if (nonNull(source)) {
                 source.setAmount(source.getAmount() - moneyTransferDTO.getAmount());
                 source.setETag(System.nanoTime());
                 session.saveOrUpdate(source);
 
-                Balance destination = checkAndFindDestination(session, moneyTransferDTO);
+                Balance destination = evaluateReceiver(session, moneyTransferDTO);
 
                 if (nonNull(destination)) {
                     destination.setAmount(destination.getAmount() + moneyTransferDTO.getAmount());
@@ -61,17 +64,17 @@ public class BalanceRepositoryImpl implements BalanceRepository {
                     session.saveOrUpdate(destination);
                 } else {
                     //TODO shall we allow this?
-                    throw new UserException("Receiver has not balance in " + moneyTransferDTO.getCurrency());
+                    return new TransferDetail("Receiver has not balance in " + moneyTransferDTO.getCurrency(), ERROR);
                 }
             } else {
-                throw new UserException("Transfer incomplete. Please check accountNumber, balance and eTag.");
+                return new TransferDetail("Transfer incomplete. Please check accountNumber, balance and eTag.", ERROR);
             }
             session.getTransaction().commit();
             committed = true;
         } catch (Exception ex) {
             log.error(ex.getMessage());
-            throw new UserException("Problem transferring money from account " + moneyTransferDTO.getSourceAccountId()
-                    + " to account: " + moneyTransferDTO.getDestinationAccountId() + ". More info : " + ex);
+            return new TransferDetail("Problem transferring money from account " + moneyTransferDTO.getSourceAccountId()
+                    + " to account: " + moneyTransferDTO.getDestinationAccountId() + ". More info : " + ex, ERROR);
         } finally {
             if (!committed) {
                 session.getTransaction().rollback();
@@ -79,10 +82,10 @@ public class BalanceRepositoryImpl implements BalanceRepository {
             session.close();
         }
 
-        return committed;
+        return new TransferDetail(null, SUCCESS);
     }
 
-    private Balance checkAndFindSender(Session session, MoneyTransferDTO moneyTransferDTO) {
+    private Balance evaluateSender(Session session, MoneyTransferDTO moneyTransferDTO) {
         Balance sender = null;
 
         /* checking following criterias :
@@ -101,9 +104,10 @@ public class BalanceRepositoryImpl implements BalanceRepository {
         return sender;
     }
 
-    private Balance checkAndFindDestination(Session session, MoneyTransferDTO moneyTransferDTO) {
+    private Balance evaluateReceiver(Session session, MoneyTransferDTO moneyTransferDTO) {
         Balance receiver = null;
-        Query receiverBalanceQuery = session.createQuery("from Balance b where b.account.id = :accountId and b.currency = :currency");
+        Query receiverBalanceQuery = session.createQuery("from Balance b where b.account.id = :accountId and " +
+                "b.currency = :currency");
         receiverBalanceQuery.setParameter("accountId", moneyTransferDTO.getDestinationAccountId());
         receiverBalanceQuery.setParameter("currency", moneyTransferDTO.getCurrency());
         if (receiverBalanceQuery.list().size() > 0) {

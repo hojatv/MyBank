@@ -2,12 +2,9 @@ package org.simplebank.controller.impl;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
-import org.simplebank.domain.MoneyTransferDTO;
+import org.simplebank.domain.*;
 import org.simplebank.controller.MybankApi;
-import org.simplebank.domain.Customer;
 import org.simplebank.services.CustomerService;
-import org.simplebank.domain.Response;
-import org.simplebank.domain.Status;
 import org.simplebank.services.MoneyService;
 
 import java.util.Collection;
@@ -66,8 +63,8 @@ public class MybankApiImpl implements MybankApi {
             MoneyTransferDTO moneyTransferDTO = null;
             try {
                 moneyTransferDTO = new Gson().fromJson(request.body(), MoneyTransferDTO.class);
-                boolean transferred = moneyService.transfer(moneyTransferDTO);
-                return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(transferred)));
+                TransferDetail transferDetail = moneyService.transfer(moneyTransferDTO);
+                return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(transferDetail)));
             } catch (Exception ex) {
                 return toJsonElement(new Response(Status.ERROR, "Problem While transferring money. More info: ")
                         + ex.getMessage());

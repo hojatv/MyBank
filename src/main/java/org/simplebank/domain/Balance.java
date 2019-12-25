@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Table(
-        uniqueConstraints=
-        @UniqueConstraint(columnNames={"currency", "account_id"})
+        uniqueConstraints =
+        @UniqueConstraint(columnNames = {"currency", "account_id"})
 )
 public class Balance {
     @Id
