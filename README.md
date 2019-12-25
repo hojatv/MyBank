@@ -20,6 +20,7 @@ _(existing accountIds 1001..1004)_
 (GET) http://localhost:4567/mybank/customer-management/customers  
 
 ###Transferring money from one account to another
+
 (POST) http://localhost:4567/mybank/transfer-management/transfer
 The format of the request body id like this : 
 `{
@@ -32,6 +33,7 @@ The format of the request body id like this :
 
 Please note that inorder to provide correct information for this request body, you should always first get correct balance information for the source account : 
 http://localhost:4567/mybank/transfer-management/balance/1001
+
 
 ## Assumptions
 
