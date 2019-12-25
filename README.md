@@ -11,15 +11,15 @@ This project currently focuses more on transferring money logic and it is not fu
 
 Here is the list of some working endpoints: 
 
-####Getting balance for an accountId:
+###Getting balance for an accountId:
 
 (GET) http://localhost:4567/mybank/transfer-management/balance/:accountId  
 _(existing accountIds 1001..1004)_
 
-####Getting all customers information : 
+###Getting all customers information : 
 (GET) http://localhost:4567/mybank/customer-management/customers  
 
-####Transferring money from one account to another
+###Transferring money from one account to another
 (POST) http://localhost:4567/mybank/transfer-management/transfer
 The format of the request body id like this : 
 `{
@@ -30,8 +30,8 @@ The format of the request body id like this :
     "etag": 82734923487
 }`
 
-* **Please note that inorder to provide correct information for this request body, you should always first get correct balance information for the source account : 
-http://localhost:4567/mybank/transfer-management/balance/1001**
+Please note that inorder to provide correct information for this request body, you should always first get correct balance information for the source account : 
+http://localhost:4567/mybank/transfer-management/balance/1001
 
 ## Assumptions
 
