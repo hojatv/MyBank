@@ -1,7 +1,6 @@
-package org.simplebank.common;
+package org.simplebank.domain;
 
 import com.google.gson.JsonElement;
-import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

@@ -9,7 +9,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Data
 public class Customer {
-
     @Id
     @GeneratedValue
     @Column(name = "customer_id")
@@ -22,10 +21,5 @@ public class Customer {
     private String phone;
 
     private Boolean verified;
-
-    @OneToOne(mappedBy="customer", cascade = CascadeType.ALL)
-    private Account account;
-
-
 
 }

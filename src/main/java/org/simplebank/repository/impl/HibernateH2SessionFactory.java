@@ -1,8 +1,15 @@
-package org.simplebank.repository;
+package org.simplebank.repository.impl;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
+import org.h2.tools.RunScript;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -11,11 +18,13 @@ import org.hibernate.service.ServiceRegistry;
 import org.simplebank.domain.Account;
 import org.simplebank.domain.Balance;
 import org.simplebank.domain.Customer;
+import org.simplebank.repository.RepositorySessionFactory;
 
-import static org.simplebank.common.Configs.getProperty;
+import static org.simplebank.util.Configs.getProperty;
 
 public class HibernateH2SessionFactory implements RepositorySessionFactory {
     private static Logger log = Logger.getLogger(HibernateH2SessionFactory.class);
+    private static String SQL_FILE_PATH = "/src/main/resources/demo.sql";
     private SessionFactory sessionFactory;
 
     public SessionFactory getSessionFactory() {
@@ -44,8 +53,22 @@ public class HibernateH2SessionFactory implements RepositorySessionFactory {
         return sessionFactory;
     }
 
-    @Override
-    public void populateData() {
+    public static void populateData() throws SQLException {
+        log.info("Populating Test User Table and data ..... ");
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(getProperty("url"), "", "");
+            String filePath = new File("").getAbsolutePath();
+            RunScript.execute(conn, new FileReader(filePath + SQL_FILE_PATH));
+        } catch (SQLException e) {
+            log.error("Error populating user data: ", e);
+            throw new RuntimeException(e);
+        } catch (FileNotFoundException e) {
+            log.error("Error finding test script file ", e);
+            throw new RuntimeException(e);
+        } finally {
+            conn.close();
+        }
 
     }
 }
