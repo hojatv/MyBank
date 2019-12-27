@@ -10,7 +10,7 @@ public enum Currency {
         this.currencyName = currencyName;
     }
 
-    private String currencyName;
+    private final String currencyName;
 
     public String getCurrencyName() {
         return currencyName;

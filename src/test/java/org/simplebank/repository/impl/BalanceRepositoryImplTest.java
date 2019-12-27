@@ -1,14 +1,11 @@
 package org.simplebank.repository.impl;
 
 import org.apache.log4j.Logger;
-import org.hibernate.SessionFactory;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.simplebank.domain.Currency;
 import org.simplebank.domain.MoneyTransferDTO;
 import org.simplebank.domain.TransferDetail;
 import org.simplebank.exception.UserException;
@@ -18,7 +15,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 import static org.simplebank.domain.Currency.*;
 import static org.simplebank.domain.Status.ERROR;
 import static org.simplebank.domain.Status.SUCCESS;
@@ -29,7 +26,7 @@ public class BalanceRepositoryImplTest {
     private static final Integer SOURCE_ACCOUNT_ID = 1001;
     private static final Integer DESTINATION_ACCOUNT_ID = 1002;
     private static final Long CUSTOMER1TO_CUSTOMER2_ETAG = 82734923487L;
-    private static Logger log = Logger.getLogger(BalanceRepositoryImplTest.class);
+    private static final Logger log = Logger.getLogger(BalanceRepositoryImplTest.class);
 
     @InjectMocks
     BalanceRepositoryImpl balanceRepository;
@@ -141,6 +138,7 @@ public class BalanceRepositoryImplTest {
         latch.countDown(); // release the latch
         // all threads are now running concurrently.
     }
+
 
     private MoneyTransferDTO createMoneyTransferDTO() {
         MoneyTransferDTO moneyTransferDTO = new MoneyTransferDTO();

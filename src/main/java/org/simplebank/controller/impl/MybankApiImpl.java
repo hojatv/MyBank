@@ -60,11 +60,15 @@ public class MybankApiImpl implements MybankApi {
     public void transferMoney() {
         post("/mybank/transfer-management/transfer", (request, response) -> {
             response.type("application/json");
-            MoneyTransferDTO moneyTransferDTO = null;
+            MoneyTransferDTO moneyTransferDTO;
             try {
                 moneyTransferDTO = new Gson().fromJson(request.body(), MoneyTransferDTO.class);
                 TransferDetail transferDetail = moneyService.transfer(moneyTransferDTO);
-                return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(transferDetail)));
+                if(transferDetail.getStatus().equals(Status.SUCCESS)) {
+                    return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(transferDetail)));
+                }else{
+                    return new Gson().toJson(new Response(Status.ERROR, new Gson().toJsonTree(transferDetail.getErrorMessage())));
+                }
             } catch (Exception ex) {
                 return toJsonElement(new Response(Status.ERROR, "Problem While transferring money. More info: ")
                         + ex.getMessage());

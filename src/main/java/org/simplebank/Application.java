@@ -7,7 +7,7 @@ import org.simplebank.repository.impl.HibernateH2SessionFactory;
 import spark.Spark;
 
 public class Application {
-    private static Logger log = Logger.getLogger(HibernateH2SessionFactory.class);
+    private static final Logger log = Logger.getLogger(HibernateH2SessionFactory.class);
 
     public static void main(String[] args) {
         Application application = new Application();

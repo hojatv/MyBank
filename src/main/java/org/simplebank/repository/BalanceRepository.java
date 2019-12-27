@@ -8,7 +8,7 @@ import org.simplebank.exception.UserException;
 import java.util.List;
 
 public interface BalanceRepository {
-    public List<Balance> getBalancesByAccountId(String accountId) throws UserException;
+    List<Balance> getBalancesByAccountId(String accountId) throws UserException;
 
-    TransferDetail transfer(MoneyTransferDTO moneyTransferDTO) throws UserException;
+    TransferDetail transfer(MoneyTransferDTO moneyTransferDTO);
 }

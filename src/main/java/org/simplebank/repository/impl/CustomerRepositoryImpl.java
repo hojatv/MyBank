@@ -16,16 +16,16 @@ import java.util.List;
 public class CustomerRepositoryImpl implements CustomerRepository {
     private final SessionFactory sessionFactory;
     private static final Logger log = Logger.getLogger(CustomerRepositoryImpl.class);
-    private final RepositorySessionFactory hibernateH2SessionFactory = new HibernateH2SessionFactory();
 
     public CustomerRepositoryImpl() {
+        RepositorySessionFactory hibernateH2SessionFactory = new HibernateH2SessionFactory();
         sessionFactory = hibernateH2SessionFactory.getSessionFactory();
     }
 
     @Override
     public Collection<Customer> getCustomers() throws UserException {
         Session session = sessionFactory.openSession();
-        List<Customer> customers = new ArrayList<>();
+        List<Customer> customers;
         try {
             customers = session.createQuery("FROM Customer").list();
         } catch (Exception ex) {

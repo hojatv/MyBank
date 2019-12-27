@@ -8,7 +8,7 @@ import org.simplebank.repository.impl.CustomerRepositoryImpl;
 import java.util.Collection;
 
 public class CustomerService {
-    private CustomerRepository customerRepository;
+    private final CustomerRepository customerRepository;
     public CustomerService(){
         customerRepository = new CustomerRepositoryImpl();
     }

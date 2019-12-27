@@ -10,7 +10,7 @@ import org.simplebank.repository.impl.BalanceRepositoryImpl;
 import java.util.List;
 
 public class MoneyService {
-    private BalanceRepository balanceRepository;
+    private final BalanceRepository balanceRepository;
 
     public MoneyService() {
         balanceRepository = new BalanceRepositoryImpl();

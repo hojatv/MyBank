@@ -23,8 +23,7 @@ import org.simplebank.repository.RepositorySessionFactory;
 import static org.simplebank.util.Configs.getProperty;
 
 public class HibernateH2SessionFactory implements RepositorySessionFactory {
-    private static Logger log = Logger.getLogger(HibernateH2SessionFactory.class);
-    private static String SQL_FILE_PATH = "/src/main/resources/demo.sql";
+    private static final Logger log = Logger.getLogger(HibernateH2SessionFactory.class);
     private SessionFactory sessionFactory;
 
     public SessionFactory getSessionFactory() {
@@ -55,10 +54,9 @@ public class HibernateH2SessionFactory implements RepositorySessionFactory {
 
     public static void populateData() throws SQLException {
         log.info("Populating Test User Table and data ..... ");
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection(getProperty("url"), "", "");
+        try (Connection conn = DriverManager.getConnection(getProperty("url"), "", "")) {
             String filePath = new File("").getAbsolutePath();
+            String SQL_FILE_PATH = "/src/main/resources/demo.sql";
             RunScript.execute(conn, new FileReader(filePath + SQL_FILE_PATH));
         } catch (SQLException e) {
             log.error("Error populating user data: ", e);
@@ -66,8 +64,6 @@ public class HibernateH2SessionFactory implements RepositorySessionFactory {
         } catch (FileNotFoundException e) {
             log.error("Error finding test script file ", e);
             throw new RuntimeException(e);
-        } finally {
-            conn.close();
         }
 
     }
