@@ -30,8 +30,7 @@ public class BalanceRepositoryImplTest {
 
     @InjectMocks
     BalanceRepositoryImpl balanceRepository;
-    private int failedTransaction = 0;
-    private int sucessfulltransaction = 0;
+    private int successfulTransaction = 0;
 
     @Before
     public void populateData() throws SQLException {
@@ -41,19 +40,19 @@ public class BalanceRepositoryImplTest {
     @Test
     public void getBalancesByAccountId() throws UserException {
         List balances = balanceRepository.getBalancesByAccountId(String.valueOf(SOURCE_ACCOUNT_ID));
-        assertThat(balances.size(),is(2));
+        assertThat(balances.size(), is(2));
 
     }
 
     @Test
-    public void successfulTransfer() {
+    public void testSuccessfulTransfer() {
         MoneyTransferDTO moneyTransferDTO = createMoneyTransferDTO();
         TransferDetail transferDetail = balanceRepository.transfer(moneyTransferDTO);
         assertThat(transferDetail.getStatus(), is(SUCCESS));
     }
 
     @Test
-    public void lowBalanceFails() {
+    public void testLowBalanceTransactionShouldFail() {
         MoneyTransferDTO moneyTransferDTO = createMoneyTransferDTO();
         moneyTransferDTO.setAmount(1000f);
         TransferDetail transferDetail = balanceRepository.transfer(moneyTransferDTO);
@@ -62,7 +61,7 @@ public class BalanceRepositoryImplTest {
     }
 
     @Test
-    public void incorrectBalanceFails() {
+    public void testIncorrectBalanceShouldFail() {
         MoneyTransferDTO moneyTransferDTO = createMoneyTransferDTO();
         moneyTransferDTO.setCurrency(JPY);
         TransferDetail transferDetail = balanceRepository.transfer(moneyTransferDTO);
@@ -71,16 +70,16 @@ public class BalanceRepositoryImplTest {
     }
 
     @Test
-    public void incorrectETagFails() {
+    public void testIncorrectETagShouldFail() {
         MoneyTransferDTO moneyTransferDTO = createMoneyTransferDTO();
-        moneyTransferDTO.setEtag(123123123l);
+        moneyTransferDTO.setEtag(123123123L);
         TransferDetail transferDetail = balanceRepository.transfer(moneyTransferDTO);
         assertThat(transferDetail.getStatus(), is(ERROR));
         assertThat(transferDetail.getErrorMessage(), is("Transfer incomplete. Please check accountNumber, balance and eTag."));
     }
 
     @Test
-    public void incorrectReceiptCurrencyFails() {
+    public void testIncorrectReceiptCurrencyShouldFail() {
         MoneyTransferDTO moneyTransferDTO = createMoneyTransferDTO();
         moneyTransferDTO.setCurrency(EUR);
         TransferDetail transferDetail = balanceRepository.transfer(moneyTransferDTO);
@@ -90,53 +89,39 @@ public class BalanceRepositoryImplTest {
 
 
     @Test
-    public void test() {
+    public void testOnlyOneTransactionSuccessWhenRaceCondition() {
         for (int j = 0; j < 100; ++j) {
             concurrentUsers();
         }
-        log.info("failedTransaction = " + failedTransaction);
-        log.info("sucessfulltransaction = " + sucessfulltransaction);
-        assertThat(sucessfulltransaction, is(1));
+        log.info("successfulTransaction = " + successfulTransaction);
+        assertThat(successfulTransaction, is(1));
     }
 
 
     public void concurrentUsers() {
-        final CountDownLatch latch = new CountDownLatch(1);
+        final CountDownLatch countDownLatch = new CountDownLatch(1);
         for (int i = 0; i < 50; ++i) {
             Runnable runner = new Runnable() {
                 public void run() {
                     try {
-                        latch.await();
+                        countDownLatch.await();
                         testMethod();
                     } catch (InterruptedException ie) {
-                        System.out.println("ie = " + ie);
-
+                        log.error("Exception when testing concurrentUsers. More info: " + ie);
                     }
                 }
 
                 private void testMethod() {
-                    //GIVEN
                     MoneyTransferDTO moneyTransferDTO = createMoneyTransferDTO();
-
-                    //WHEN
                     TransferDetail transferDetail = balanceRepository.transfer(moneyTransferDTO);
-
-                    //THEN
-                    if (transferDetail.getStatus().getStatus().equals(ERROR.getStatus())) {
-                        failedTransaction++;
-                    }
                     if (transferDetail.getStatus().getStatus().equals(SUCCESS.getStatus())) {
-                        sucessfulltransaction++;
+                        successfulTransaction++;
                     }
-
-
                 }
             };
             new Thread(runner, "TestThread" + i).start();
         }
-        // all threads are waiting on the latch.
-        latch.countDown(); // release the latch
-        // all threads are now running concurrently.
+        countDownLatch.countDown();
     }
 
 

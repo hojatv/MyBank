@@ -25,7 +25,7 @@ public class Balance {
 
     private Float amount;
 
-    /*a timeStamp based unique tag to control concurrency*/
+    /*a timeStamp based unique tag making transactions more secure*/
     private Long eTag;
 
     @ManyToOne
@@ -33,3 +33,4 @@ public class Balance {
     private Account account;
 
 }
+

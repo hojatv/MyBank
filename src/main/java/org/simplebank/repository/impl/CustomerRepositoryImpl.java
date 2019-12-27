@@ -9,7 +9,6 @@ import org.simplebank.repository.CustomerRepository;
 import org.simplebank.repository.RepositorySessionFactory;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 

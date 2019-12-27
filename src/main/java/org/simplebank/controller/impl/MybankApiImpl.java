@@ -43,7 +43,7 @@ public class MybankApiImpl implements MybankApi {
 
     @Override
     public void getBalances() {
-        get("/mybank/transfer-management/balance/:accountId", (request, response) -> {
+                get("/mybank/transfer-management/balance/:accountId", (request, response) -> {
             response.type("application/json");
             String accountId = request.params(":accountId");
             try {
@@ -64,9 +64,9 @@ public class MybankApiImpl implements MybankApi {
             try {
                 moneyTransferDTO = new Gson().fromJson(request.body(), MoneyTransferDTO.class);
                 TransferDetail transferDetail = moneyService.transfer(moneyTransferDTO);
-                if(transferDetail.getStatus().equals(Status.SUCCESS)) {
+                if (transferDetail.getStatus().equals(Status.SUCCESS)) {
                     return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(transferDetail)));
-                }else{
+                } else {
                     return new Gson().toJson(new Response(Status.ERROR, new Gson().toJsonTree(transferDetail.getErrorMessage())));
                 }
             } catch (Exception ex) {
