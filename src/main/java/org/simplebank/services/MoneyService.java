@@ -4,23 +4,11 @@ import org.simplebank.domain.Balance;
 import org.simplebank.domain.MoneyTransferDTO;
 import org.simplebank.domain.TransferDetail;
 import org.simplebank.exception.UserException;
-import org.simplebank.repository.BalanceRepository;
-import org.simplebank.repository.impl.BalanceRepositoryImpl;
 
 import java.util.List;
 
-public class MoneyService {
-    private final BalanceRepository balanceRepository;
+public interface MoneyService {
+    TransferDetail transfer(MoneyTransferDTO moneyTransferDTO) throws UserException;
 
-    public MoneyService() {
-        balanceRepository = new BalanceRepositoryImpl();
-    }
-
-    public TransferDetail transfer(MoneyTransferDTO moneyTransferDTO) throws UserException {
-        return balanceRepository.transfer(moneyTransferDTO);
-    }
-
-    public List<Balance> getBalancesByAccountId(String accountId) throws UserException {
-        return balanceRepository.getBalancesByAccountId(accountId);
-    }
+    List<Balance> getBalancesByAccountId(String accountId) throws UserException;
 }

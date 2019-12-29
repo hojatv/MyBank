@@ -1,6 +1,7 @@
 package org.simplebank.repository.impl;
 
 import org.apache.log4j.Logger;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,8 +10,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.simplebank.domain.MoneyTransferDTO;
 import org.simplebank.domain.TransferDetail;
 import org.simplebank.exception.UserException;
+import org.simplebank.util.DataSetup;
 
-import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
@@ -19,6 +20,7 @@ import static org.junit.Assert.assertThat;
 import static org.simplebank.domain.Currency.*;
 import static org.simplebank.domain.Status.ERROR;
 import static org.simplebank.domain.Status.SUCCESS;
+import static org.simplebank.util.DataSetup.clearDataSet;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BalanceRepositoryImplTest {
@@ -33,8 +35,8 @@ public class BalanceRepositoryImplTest {
     private int successfulTransaction = 0;
 
     @Before
-    public void populateData() throws SQLException {
-        HibernateH2SessionFactory.populateData();
+    public void populateData() {
+        DataSetup.populateData();
     }
 
     @Test
@@ -133,5 +135,10 @@ public class BalanceRepositoryImplTest {
         moneyTransferDTO.setDestinationAccountId(DESTINATION_ACCOUNT_ID);
         moneyTransferDTO.setEtag(CUSTOMER1TO_CUSTOMER2_ETAG);
         return moneyTransferDTO;
+    }
+
+    @After
+    public void cleanUp(){
+        clearDataSet();
     }
 }

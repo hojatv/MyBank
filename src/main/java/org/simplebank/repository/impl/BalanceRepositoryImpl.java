@@ -19,7 +19,7 @@ import static org.simplebank.domain.Status.SUCCESS;
 
 public class BalanceRepositoryImpl implements BalanceRepository {
     private final SessionFactory sessionFactory;
-    private static final Logger log = Logger.getLogger(CustomerRepositoryImpl.class);
+    private static final Logger log = Logger.getLogger(BalanceRepositoryImpl.class);
 
     public BalanceRepositoryImpl() {
         RepositorySessionFactory hibernateH2SessionFactory = new HibernateH2SessionFactory();

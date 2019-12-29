@@ -6,6 +6,8 @@ import org.simplebank.domain.*;
 import org.simplebank.controller.MybankApi;
 import org.simplebank.services.CustomerService;
 import org.simplebank.services.MoneyService;
+import org.simplebank.services.ServiceFactory;
+import org.simplebank.services.impl.ServiceFactoryImpl;
 
 import java.util.Collection;
 
@@ -18,16 +20,19 @@ import static spark.Spark.post;
 public class MybankApiImpl implements MybankApi {
 
     private final CustomerService customerService;
+    private final ServiceFactory serviceFactory;
     private final MoneyService moneyService;
+    private Gson gson = new Gson();
 
     public MybankApiImpl() {
-        moneyService = new MoneyService();
-        customerService = new CustomerService();
+        serviceFactory = new ServiceFactoryImpl();
+        moneyService = serviceFactory.makeMoneyService();
+        customerService = serviceFactory.makeCustomerService();
     }
 
 
     @Override
-    public void getAllCustomers() {
+    public void getCustomers() {
         get("/mybank/customer-management/customers", (request, response) -> {
             response.type("application/json");
             Collection<Customer> customers;
@@ -37,13 +42,13 @@ public class MybankApiImpl implements MybankApi {
                 return toJsonElement(new Response(Status.ERROR, "Problem While getting customers"));
 
             }
-            return toJsonElement(new Response(Status.SUCCESS, new Gson().toJsonTree(customers)));
+            return toJsonElement(new Response(Status.SUCCESS, gson.toJsonTree(customers)));
         });
     }
 
     @Override
-    public void getBalances() {
-                get("/mybank/transfer-management/balance/:accountId", (request, response) -> {
+    public void findBalanceForAccountId() {
+        get("/mybank/transfer-management/balance/:accountId", (request, response) -> {
             response.type("application/json");
             String accountId = request.params(":accountId");
             try {
@@ -57,17 +62,17 @@ public class MybankApiImpl implements MybankApi {
     }
 
     @Override
-    public void transferMoney() {
+    public void transfer() {
         post("/mybank/transfer-management/transfer", (request, response) -> {
             response.type("application/json");
             MoneyTransferDTO moneyTransferDTO;
             try {
-                moneyTransferDTO = new Gson().fromJson(request.body(), MoneyTransferDTO.class);
+                moneyTransferDTO = gson.fromJson(request.body(), MoneyTransferDTO.class);
                 TransferDetail transferDetail = moneyService.transfer(moneyTransferDTO);
                 if (transferDetail.getStatus().equals(Status.SUCCESS)) {
-                    return new Gson().toJson(new Response(Status.SUCCESS, new Gson().toJsonTree(transferDetail)));
+                    return gson.toJson(new Response(Status.SUCCESS, gson.toJsonTree(transferDetail)));
                 } else {
-                    return new Gson().toJson(new Response(Status.ERROR, new Gson().toJsonTree(transferDetail.getErrorMessage())));
+                    return gson.toJson(new Response(Status.ERROR, gson.toJsonTree(transferDetail.getErrorMessage())));
                 }
             } catch (Exception ex) {
                 return toJsonElement(new Response(Status.ERROR, "Problem While transferring money. More info: ")
@@ -77,6 +82,6 @@ public class MybankApiImpl implements MybankApi {
     }
 
     private JsonElement toJsonElement(Object response) {
-        return new Gson().toJsonTree(response);
+        return gson.toJsonTree(response);
     }
 }
