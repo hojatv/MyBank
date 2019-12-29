@@ -6,6 +6,8 @@ import org.simplebank.domain.*;
 import org.simplebank.controller.MybankApi;
 import org.simplebank.services.CustomerService;
 import org.simplebank.services.MoneyService;
+import org.simplebank.services.ServiceFactory;
+import org.simplebank.services.impl.ServiceFactoryImpl;
 
 import java.util.Collection;
 
@@ -18,16 +20,18 @@ import static spark.Spark.post;
 public class MybankApiImpl implements MybankApi {
 
     private final CustomerService customerService;
+    private final ServiceFactory serviceFactory;
     private final MoneyService moneyService;
 
     public MybankApiImpl() {
-        moneyService = new MoneyService();
-        customerService = new CustomerService();
+        serviceFactory = new ServiceFactoryImpl();
+        moneyService = serviceFactory.makeMoneyService();
+        customerService = serviceFactory.makeCustomerService();
     }
 
 
     @Override
-    public void getAllCustomers() {
+    public void getCustomers() {
         get("/mybank/customer-management/customers", (request, response) -> {
             response.type("application/json");
             Collection<Customer> customers;
@@ -42,8 +46,8 @@ public class MybankApiImpl implements MybankApi {
     }
 
     @Override
-    public void getBalances() {
-                get("/mybank/transfer-management/balance/:accountId", (request, response) -> {
+    public void findBalanceForAccountId() {
+        get("/mybank/transfer-management/balance/:accountId", (request, response) -> {
             response.type("application/json");
             String accountId = request.params(":accountId");
             try {
@@ -57,7 +61,7 @@ public class MybankApiImpl implements MybankApi {
     }
 
     @Override
-    public void transferMoney() {
+    public void transfer() {
         post("/mybank/transfer-management/transfer", (request, response) -> {
             response.type("application/json");
             MoneyTransferDTO moneyTransferDTO;

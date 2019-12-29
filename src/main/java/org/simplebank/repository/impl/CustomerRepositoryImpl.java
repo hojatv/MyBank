@@ -7,7 +7,6 @@ import org.simplebank.domain.Customer;
 import org.simplebank.exception.UserException;
 import org.simplebank.repository.CustomerRepository;
 import org.simplebank.repository.RepositorySessionFactory;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.Collection;
 import java.util.List;
@@ -34,23 +33,5 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             session.close();
         }
         return customers;
-    }
-
-    @Override
-    public Integer addCustomer(Customer customer) {
-        //TODO
-        throw new NotImplementedException();
-    }
-
-    @Override
-    public Customer getCustomerById(Integer id) {
-        //TODO
-        throw new NotImplementedException();
-    }
-
-    @Override
-    public Boolean deleteCustomer(Integer id) {
-        //TODO
-        throw new NotImplementedException();
     }
 }

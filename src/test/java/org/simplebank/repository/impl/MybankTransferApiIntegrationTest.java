@@ -8,9 +8,12 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.simplebank.controller.ControllerFactory;
 import org.simplebank.controller.MybankApi;
+import org.simplebank.controller.impl.ControllerFactoryImpl;
 import org.simplebank.controller.impl.MybankApiImpl;
 import org.simplebank.domain.Status;
+import org.simplebank.util.DataSetup;
 import spark.Spark;
 
 import java.io.IOException;
@@ -18,23 +21,24 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 import static org.junit.Assert.assertEquals;
+import static org.simplebank.util.DataSetup.clearDataSet;
 
 public class MybankTransferApiIntegrationTest {
     private static final String TRANSFER_URL = "http://localhost:4567/mybank/transfer-management/transfer";
     private static final String GET_CUSTOMERS_URL = "http://localhost:4567/mybank/customer-management/customers";
     private final OkHttpClient client = new OkHttpClient();
-    private static final HibernateH2SessionFactory hibernateSessionFactory = new HibernateH2SessionFactory();
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
     private final Gson gson = new Gson();
 
     @BeforeClass
-    public static void setup() throws SQLException {
-        MybankApi mybankApi = new MybankApiImpl();
-        mybankApi.transferMoney();
-        mybankApi.getBalances();
-        mybankApi.getAllCustomers();
-        hibernateSessionFactory.populateData();
+    public static void setup(){
+        ControllerFactory controllerFactory = new ControllerFactoryImpl();
+        MybankApi mybankApi = controllerFactory.makeMyBank();
+        DataSetup.populateData();
+        mybankApi.transfer();
+        mybankApi.findBalanceForAccountId();
+        mybankApi.getCustomers();
     }
 
     @Test
@@ -181,6 +185,7 @@ public class MybankTransferApiIntegrationTest {
 
     @AfterClass
     public static void killServer() {
+        clearDataSet();
         Spark.stop();
     }
 
