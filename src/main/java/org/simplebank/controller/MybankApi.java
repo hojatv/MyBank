@@ -1,7 +1,12 @@
 package org.simplebank.controller;
 
+import org.simplebank.domain.Customer;
+import org.simplebank.exception.UserException;
+
+import java.util.Collection;
+
 public interface MybankApi {
-    void getCustomers();
+    Collection<Customer> getCustomers() throws UserException;
     void findBalanceForAccountId();
     void transfer();
 }

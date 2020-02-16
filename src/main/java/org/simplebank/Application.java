@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 import org.simplebank.controller.ControllerFactory;
 import org.simplebank.controller.MybankApi;
 import org.simplebank.controller.impl.ControllerFactoryImpl;
+import org.simplebank.exception.UserException;
 import org.simplebank.util.DataSetup;
 import spark.Spark;
 
@@ -28,7 +29,7 @@ public class Application {
         }
     }
 
-    private void setupEndpoints(MybankApi mybankApi) {
+    private void setupEndpoints(MybankApi mybankApi) throws UserException {
         mybankApi.findBalanceForAccountId();
         mybankApi.transfer();
         mybankApi.getCustomers();

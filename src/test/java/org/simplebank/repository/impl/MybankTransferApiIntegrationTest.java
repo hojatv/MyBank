@@ -13,6 +13,7 @@ import org.simplebank.controller.MybankApi;
 import org.simplebank.controller.impl.ControllerFactoryImpl;
 import org.simplebank.controller.impl.MybankApiImpl;
 import org.simplebank.domain.Status;
+import org.simplebank.exception.UserException;
 import org.simplebank.util.DataSetup;
 import spark.Spark;
 
@@ -32,7 +33,7 @@ public class MybankTransferApiIntegrationTest {
     private final Gson gson = new Gson();
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() throws UserException {
         ControllerFactory controllerFactory = new ControllerFactoryImpl();
         MybankApi mybankApi = controllerFactory.makeMyBank();
         DataSetup.populateData();

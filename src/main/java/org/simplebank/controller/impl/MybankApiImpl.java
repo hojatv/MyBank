@@ -2,12 +2,17 @@ package org.simplebank.controller.impl;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
+import lombok.RequiredArgsConstructor;
 import org.simplebank.domain.*;
 import org.simplebank.controller.MybankApi;
+import org.simplebank.exception.UserException;
 import org.simplebank.services.CustomerService;
 import org.simplebank.services.MoneyService;
 import org.simplebank.services.ServiceFactory;
 import org.simplebank.services.impl.ServiceFactoryImpl;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
 
@@ -17,6 +22,8 @@ import static spark.Spark.post;
 /**
  * Demo implementation of Mybank using Spark Framework
  */
+@RestController
+@RequiredArgsConstructor
 public class MybankApiImpl implements MybankApi {
 
     private final CustomerService customerService;
@@ -32,8 +39,9 @@ public class MybankApiImpl implements MybankApi {
 
 
     @Override
-    public void getCustomers() {
-        get("/mybank/customer-management/customers", (request, response) -> {
+    @RequestMapping(method = RequestMethod.GET, path = "/mybank/transfer-management/balance/:accountId")
+    public Collection<Customer> getCustomers() throws UserException {
+        /*get("/mybank/customer-management/customers", (request, response) -> {
             response.type("application/json");
             Collection<Customer> customers;
             try {
@@ -43,7 +51,8 @@ public class MybankApiImpl implements MybankApi {
 
             }
             return toJsonElement(new Response(Status.SUCCESS, gson.toJsonTree(customers)));
-        });
+        });*/
+        return customerService.getCustomers();
     }
 
     @Override
