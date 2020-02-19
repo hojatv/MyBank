@@ -1,0 +1,716 @@
+2020-02-17 22:36:41 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 22:36:41 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 22:36:41 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 22:36:41 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 22:36:41 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 22:36:41 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 22:36:41 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:36:41 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 22:36:41 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 22:36:41 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 22:36:41 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:36:41 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:36:42 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 22:36:42 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 22:36:42 INFO  org.eclipse.jetty.util.log     - Logging initialized @1488ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 22:36:42 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 22:36:42 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 22:36:42 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 22:36:42 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 22:36:42 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 22:36:42 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 22:36:42 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@38e005d7{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 22:36:42 INFO  org.eclipse.jetty.server.Server     - Started @1597ms
+2020-02-17 22:37:13 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 22:39:16 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 22:39:16 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 22:39:16 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 22:39:16 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 22:39:16 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 22:39:16 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 22:39:16 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 22:39:16 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 22:39:16 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 22:39:17 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 22:39:17 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@c6a6c1d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:39:17 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@191a709b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:39:17 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b965857'
+2020-02-17 22:39:17 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 22:39:17 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 22:39:17 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 22:39:17 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 22:39:17 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 22:39:17 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 22:39:17 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3be4fcc0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:39:17 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c4262d1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:39:17 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b965857'
+2020-02-17 22:39:17 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 22:39:25 INFO  org.eclipse.jetty.util.log     - Logging initialized @9574ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 22:39:25 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 22:39:25 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 22:39:25 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 22:39:25 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 22:39:25 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 22:39:25 INFO  org.eclipse.jetty.server.session     - Scavenging every 660000ms
+2020-02-17 22:39:25 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@71f2026b{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 22:39:25 INFO  org.eclipse.jetty.server.Server     - Started @9760ms
+2020-02-17 22:39:30 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 22:47:14 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 22:47:14 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 22:47:14 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 22:47:14 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 22:47:14 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 22:47:14 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 22:47:14 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 22:47:14 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 22:47:14 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 22:47:14 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 22:47:15 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:47:15 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:47:15 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 22:47:15 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 22:47:15 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 22:47:15 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 22:47:15 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 22:47:15 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 22:47:15 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 22:47:15 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:47:15 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 22:47:15 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 22:47:15 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 22:47:15 INFO  org.eclipse.jetty.util.log     - Logging initialized @1103ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 22:47:15 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 22:47:15 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 22:47:15 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 22:47:15 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 22:47:15 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 22:47:15 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 22:47:15 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@1aedeb3d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 22:47:15 INFO  org.eclipse.jetty.server.Server     - Started @1185ms
+2020-02-17 22:47:24 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:02:08 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:02:08 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:02:08 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:02:08 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:02:08 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:02:08 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:02:08 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:02:08 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:02:08 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:02:08 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:02:08 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:02:08 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:02:08 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:02:08 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:02:08 INFO  org.eclipse.jetty.util.log     - Logging initialized @1110ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:02:08 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:02:08 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:02:08 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:02:08 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:02:08 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:02:08 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:02:08 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@1aedeb3d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:02:08 INFO  org.eclipse.jetty.server.Server     - Started @1182ms
+2020-02-17 23:05:08 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/test] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:08:51 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:08:51 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:08:51 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:08:51 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:08:52 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:08:52 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:08:52 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:08:52 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:08:52 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:08:52 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:08:52 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:08:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:08:52 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:08:52 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:08:52 INFO  org.eclipse.jetty.util.log     - Logging initialized @1108ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:08:52 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:08:52 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:08:52 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:08:52 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:08:52 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:08:52 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:08:52 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@26eafd8c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:08:52 INFO  org.eclipse.jetty.server.Server     - Started @1189ms
+2020-02-17 23:09:03 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/test] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:09:04 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/test] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:09:22 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:09:22 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:09:22 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:09:22 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:09:22 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:09:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:09:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:09:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:09:22 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:09:22 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:09:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:09:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:09:23 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:09:23 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:09:23 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:09:23 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:09:23 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:09:23 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:09:23 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:09:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:09:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:09:23 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:09:23 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:09:23 INFO  org.eclipse.jetty.util.log     - Logging initialized @1060ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:09:23 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:09:23 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:09:23 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:09:23 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:09:23 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:09:23 INFO  org.eclipse.jetty.server.session     - Scavenging every 660000ms
+2020-02-17 23:09:23 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@b9f738a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:09:23 INFO  org.eclipse.jetty.server.Server     - Started @1141ms
+2020-02-17 23:09:39 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/transfer-management/test] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:09:47 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/transfer-management/testii] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:09:51 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/transfer-management] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:10:35 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:10:35 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:10:35 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:10:35 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:10:35 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:10:35 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:10:35 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:10:35 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:10:35 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:10:36 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:10:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:10:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:10:36 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:10:36 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:10:36 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:10:36 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:10:36 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:10:36 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:10:36 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:10:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:10:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:10:36 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:10:36 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:10:36 INFO  org.eclipse.jetty.util.log     - Logging initialized @1122ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:10:36 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:10:36 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:10:36 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:10:36 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:10:36 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:10:36 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:10:36 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@74b6c10c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:10:36 INFO  org.eclipse.jetty.server.Server     - Started @1198ms
+2020-02-17 23:10:40 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/transfer-management] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:10:45 INFO  spark.http.matching.MatcherFilter     - The requested route [/mybank/transfer-management/dummy] has not been mapped in Spark for Accept: [*/*]
+2020-02-17 23:12:13 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:12:13 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:12:13 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:12:13 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:12:13 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:12:13 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:12:13 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:12:13 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:12:13 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:12:13 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:12:14 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@38704ff0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:12:14 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@359b650b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:12:14 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b965857'
+2020-02-17 23:12:14 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:12:14 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:12:14 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:12:14 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:12:14 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:12:14 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:12:14 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3be4fcc0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:12:14 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c4262d1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:12:14 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@b965857'
+2020-02-17 23:12:14 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:12:14 INFO  org.eclipse.jetty.util.log     - Logging initialized @2206ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:12:14 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:12:14 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:12:14 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:12:14 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:12:14 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:12:14 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:12:14 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@21668506{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:12:14 INFO  org.eclipse.jetty.server.Server     - Started @2373ms
+2020-02-17 23:13:03 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:13:03 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:13:03 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:13:03 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:13:03 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:13:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:13:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:13:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:13:03 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:13:03 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:13:03 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:03 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:04 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:13:04 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:13:04 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:13:04 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:13:04 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:13:04 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:13:04 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:13:04 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:04 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:04 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:13:04 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:13:04 INFO  org.eclipse.jetty.util.log     - Logging initialized @1149ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:13:04 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:13:04 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:13:04 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:13:04 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:13:04 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:13:04 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:13:04 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@6918ebdb{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:13:04 INFO  org.eclipse.jetty.server.Server     - Started @1219ms
+2020-02-17 23:13:21 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:13:21 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:13:21 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:13:21 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:13:21 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:13:21 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:13:21 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:13:21 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:13:21 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:13:21 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:13:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:22 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:13:22 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:13:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:13:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:13:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:13:22 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:13:22 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:13:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:22 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:13:22 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:13:22 INFO  org.eclipse.jetty.util.log     - Logging initialized @1304ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:13:22 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:13:22 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:13:22 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:13:22 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:13:22 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:13:22 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:13:22 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@195be54e{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:13:22 INFO  org.eclipse.jetty.server.Server     - Started @1378ms
+2020-02-17 23:13:51 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:13:51 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:13:51 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:13:51 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:13:51 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:13:51 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:13:51 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:13:51 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:13:51 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:13:51 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:13:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:52 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:13:52 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:13:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:13:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:13:52 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:13:52 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:13:52 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:13:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:52 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:13:52 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:13:52 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:13:52 INFO  org.eclipse.jetty.util.log     - Logging initialized @1203ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:13:52 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:13:52 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:13:52 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:13:52 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:13:52 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:13:52 INFO  org.eclipse.jetty.server.session     - Scavenging every 660000ms
+2020-02-17 23:13:52 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@706bab59{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:13:52 INFO  org.eclipse.jetty.server.Server     - Started @1294ms
+2020-02-17 23:14:33 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:15:43 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:15:43 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:15:43 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:15:44 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:15:44 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:15:44 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:15:44 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:15:44 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:15:44 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:15:44 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:15:44 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:15:44 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:15:44 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:15:44 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:15:44 INFO  org.eclipse.jetty.util.log     - Logging initialized @1154ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:15:44 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:15:44 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:15:44 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:15:44 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:15:44 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:15:44 INFO  org.eclipse.jetty.server.session     - Scavenging every 660000ms
+2020-02-17 23:15:44 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@38e005d7{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:15:44 INFO  org.eclipse.jetty.server.Server     - Started @1228ms
+2020-02-17 23:15:45 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:21:58 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:21:58 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:21:58 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:21:58 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:21:58 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:21:58 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:21:58 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:21:58 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:21:58 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:21:58 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:21:59 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:21:59 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:21:59 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:21:59 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:21:59 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:21:59 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:21:59 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:21:59 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:21:59 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:21:59 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:21:59 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:21:59 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:21:59 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:21:59 INFO  org.eclipse.jetty.util.log     - Logging initialized @1105ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:21:59 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:21:59 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:21:59 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:21:59 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:21:59 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:21:59 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:21:59 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@4384c151{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:21:59 INFO  org.eclipse.jetty.server.Server     - Started @1196ms
+2020-02-17 23:22:08 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:23:22 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:23:22 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:23:22 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:23:22 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:23:22 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:23:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:23:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:23:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:23:22 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:23:22 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:23:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:23:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:23:23 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:23:23 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:23:23 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:23:23 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:23:23 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:23:23 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:23:23 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:23:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:23:23 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:23:23 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:23:23 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:23:23 INFO  org.eclipse.jetty.util.log     - Logging initialized @1105ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:23:23 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:23:23 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:23:23 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:23:23 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:23:23 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:23:23 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:23:23 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@4384c151{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:23:23 INFO  org.eclipse.jetty.server.Server     - Started @1200ms
+2020-02-17 23:23:28 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:25:22 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:25:22 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:25:22 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:25:22 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:25:22 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:25:22 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:25:22 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:22 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:25:22 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:25:22 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:25:22 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:22 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:22 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:25:22 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:25:22 INFO  org.eclipse.jetty.util.log     - Logging initialized @1059ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:25:22 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:25:22 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:25:22 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:25:22 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:25:22 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:25:22 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:25:22 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@636d697d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:25:22 INFO  org.eclipse.jetty.server.Server     - Started @1156ms
+2020-02-17 23:25:35 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:25:35 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:25:35 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:25:35 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:25:35 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:25:35 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:25:35 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:25:35 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:25:35 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:25:35 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:25:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:36 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:25:36 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:25:36 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:25:36 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:25:36 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:25:36 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:25:36 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:25:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:36 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:25:36 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:25:36 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:25:36 INFO  org.eclipse.jetty.util.log     - Logging initialized @1114ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:25:36 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:25:36 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:25:36 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:25:36 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:25:36 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:25:36 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:25:36 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@26eafd8c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:25:36 INFO  org.eclipse.jetty.server.Server     - Started @1196ms
+2020-02-17 23:25:45 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:26:41 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:26:41 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:26:41 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:26:41 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:26:41 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:26:41 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:26:41 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:26:41 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:26:41 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:26:41 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:26:41 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:26:41 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:26:42 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:26:42 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:26:42 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:26:42 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:26:42 INFO  org.eclipse.jetty.util.log     - Logging initialized @1127ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:26:42 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:26:42 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:26:42 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:26:42 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:26:42 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:26:42 INFO  org.eclipse.jetty.server.session     - Scavenging every 600000ms
+2020-02-17 23:26:42 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@4697f1e8{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:26:42 INFO  org.eclipse.jetty.server.Server     - Started @1203ms
+2020-02-17 23:26:45 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:27:53 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:27:53 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:27:53 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:27:53 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:27:53 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:27:53 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:27:53 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:27:53 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:27:53 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:27:54 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:27:54 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a3c96e3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:27:54 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79145d5a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:27:54 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:27:54 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:27:54 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:27:54 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:27:54 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:27:54 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:27:54 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:27:54 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@269f4bad] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:27:54 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@56f6d40b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:27:54 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7b324585'
+2020-02-17 23:27:54 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:27:54 INFO  org.eclipse.jetty.util.log     - Logging initialized @1098ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:27:54 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:27:54 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:27:54 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:27:54 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:27:54 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:27:54 INFO  org.eclipse.jetty.server.session     - Scavenging every 660000ms
+2020-02-17 23:27:54 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@34549d6d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:27:54 INFO  org.eclipse.jetty.server.Server     - Started @1187ms
+2020-02-17 23:28:19 INFO  org.hibernate.hql.internal.QueryTranslatorFactoryInitiator     - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-17 23:32:03 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:32:03 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:32:03 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:32:03 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:32:03 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:32:03 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:32:03 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a776e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@505a9d7c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:32:03 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5974109'
+2020-02-17 23:32:03 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:32:03 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:32:03 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40e10ff8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:32:03 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20b5f2ac] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:32:03 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5974109'
+2020-02-17 23:32:03 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:32:03 INFO  org.eclipse.jetty.util.log     - Logging initialized @1299ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:32:04 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:32:04 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:32:04 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:32:04 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:32:04 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:32:04 INFO  org.eclipse.jetty.server.session     - Scavenging every 660000ms
+2020-02-17 23:32:04 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@75c7127d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:32:04 INFO  org.eclipse.jetty.server.Server     - Started @1373ms
+2020-02-17 23:34:39 INFO  org.hibernate.Version     - HHH000412: Hibernate Core {5.2.10.Final}
+2020-02-17 23:34:39 INFO  org.hibernate.cfg.Environment     - HHH000206: hibernate.properties not found
+2020-02-17 23:34:39 INFO  org.simplebank.util.Configs     - loadConfig(): Loading config file: application.properties
+2020-02-17 23:34:39 INFO  org.hibernate.annotations.common.Version     - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-17 23:34:39 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:34:39 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:34:39 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:34:39 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:34:39 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:34:39 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:34:40 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@a776e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:34:40 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@505a9d7c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:34:40 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5974109'
+2020-02-17 23:34:40 WARN  org.hibernate.orm.connections.pooling     - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-17 23:34:40 INFO  org.hibernate.orm.connections.pooling     - HHH10001005: using driver [org.h2.Driver] at URL [jdbc:h2:mem:app;DB_CLOSE_DELAY=-1]
+2020-02-17 23:34:40 INFO  org.hibernate.orm.connections.pooling     - HHH10001001: Connection properties: {}
+2020-02-17 23:34:40 INFO  org.hibernate.orm.connections.pooling     - HHH10001003: Autocommit mode: false
+2020-02-17 23:34:40 INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl     - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-17 23:34:40 INFO  org.hibernate.dialect.Dialect     - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-02-17 23:34:40 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@40e10ff8] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:34:40 INFO  org.hibernate.orm.connections.access     - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20b5f2ac] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-17 23:34:40 INFO  org.hibernate.tool.schema.internal.SchemaCreatorImpl     - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5974109'
+2020-02-17 23:34:40 INFO  org.simplebank.util.DataSetup     - Populating Test User Table and data ..... 
+2020-02-17 23:34:40 INFO  org.eclipse.jetty.util.log     - Logging initialized @1154ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-02-17 23:34:40 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - == Spark has ignited ...
+2020-02-17 23:34:40 INFO  spark.embeddedserver.jetty.EmbeddedJettyServer     - >> Listening on 0.0.0.0:4567
+2020-02-17 23:34:40 INFO  org.eclipse.jetty.server.Server     - jetty-9.4.8.v20171121, build timestamp: 2017-11-21T22:27:37+01:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+2020-02-17 23:34:40 INFO  org.eclipse.jetty.server.session     - DefaultSessionIdManager workerName=node0
+2020-02-17 23:34:40 INFO  org.eclipse.jetty.server.session     - No SessionScavenger set, using defaults
+2020-02-17 23:34:40 INFO  org.eclipse.jetty.server.session     - Scavenging every 660000ms
+2020-02-17 23:34:40 INFO  org.eclipse.jetty.server.AbstractConnector     - Started ServerConnector@71650fc7{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2020-02-17 23:34:40 INFO  org.eclipse.jetty.server.Server     - Started @1230ms
+2020-02-17 23:34:47 ERROR spark.http.matching.GeneralError     - 
+java.lang.IllegalArgumentException: class org.eclipse.jetty.server.handler.ErrorHandler declares multiple JSON fields named _listeners
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:170)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+	at com.google.gson.Gson.getAdapter(Gson.java:423)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:115)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:164)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+	at com.google.gson.Gson.getAdapter(Gson.java:423)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:115)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:164)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+	at com.google.gson.Gson.getAdapter(Gson.java:423)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:115)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:164)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+	at com.google.gson.Gson.getAdapter(Gson.java:423)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:115)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:164)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+	at com.google.gson.Gson.getAdapter(Gson.java:423)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:115)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:164)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+	at com.google.gson.Gson.getAdapter(Gson.java:423)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.createBoundField(ReflectiveTypeAdapterFactory.java:115)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.getBoundFields(ReflectiveTypeAdapterFactory.java:164)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.create(ReflectiveTypeAdapterFactory.java:100)
+	at com.google.gson.Gson.getAdapter(Gson.java:423)
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:56)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:125)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.write(TypeAdapterRuntimeTypeWrapper.java:69)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$1.write(ReflectiveTypeAdapterFactory.java:125)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.write(ReflectiveTypeAdapterFactory.java:243)
+	at com.google.gson.Gson.toJson(Gson.java:669)
+	at com.google.gson.Gson.toJson(Gson.java:648)
+	at com.google.gson.Gson.toJson(Gson.java:603)
+	at com.google.gson.Gson.toJson(Gson.java:583)
+	at org.simplebank.controller.impl.MybankApiImpl$JsonTransformer.render(MybankApiImpl.java:119)
+	at spark.ResponseTransformerRouteImpl$1.render(ResponseTransformerRouteImpl.java:42)
+	at spark.http.matching.Routes.execute(Routes.java:63)
+	at spark.http.matching.MatcherFilter.doFilter(MatcherFilter.java:130)
+	at spark.embeddedserver.jetty.JettyHandler.doHandle(JettyHandler.java:50)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1568)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:530)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:347)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:256)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:279)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:124)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:247)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:140)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:708)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:626)
+	at java.lang.Thread.run(Thread.java:748)

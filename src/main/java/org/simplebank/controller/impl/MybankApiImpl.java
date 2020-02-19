@@ -8,6 +8,7 @@ import org.simplebank.services.CustomerService;
 import org.simplebank.services.MoneyService;
 import org.simplebank.services.ServiceFactory;
 import org.simplebank.services.impl.ServiceFactoryImpl;
+import spark.ResponseTransformer;
 
 import java.util.Collection;
 
@@ -38,12 +39,15 @@ public class MybankApiImpl implements MybankApi {
             Collection<Customer> customers;
             try {
                 customers = customerService.getCustomers();
+                response.status(200);
+                //response.body(String.valueOf(toJsonElement(new Response(Status.SUCCESS, gson.toJsonTree(customers)))));
+                response.body(String.valueOf(toJsonElement(customers)));
             } catch (Exception ex) {
-                return toJsonElement(new Response(Status.ERROR, "Problem While getting customers"));
-
+                response.status(500);
+                response.body(String.valueOf(toJsonElement(new Response(Status.ERROR, "Problem While getting customers"))));
             }
-            return toJsonElement(new Response(Status.SUCCESS, gson.toJsonTree(customers)));
-        });
+            return response.body();
+        }, new JsonTransformer());
     }
 
     @Override
@@ -53,12 +57,22 @@ public class MybankApiImpl implements MybankApi {
             String accountId = request.params(":accountId");
             try {
                 JsonElement data = toJsonElement(moneyService.getBalancesByAccountId(accountId));
-                return toJsonElement(new Response(Status.SUCCESS, data));
+                if (data.getAsJsonArray().size() > 0) {
+                    response.status(200);
+                    response.body(String.valueOf(data));
+
+                } else {
+                    response.status(404);
+                    response.body("NotFound");
+                }
             } catch (Exception ex) {
-                return toJsonElement(new Response(Status.ERROR, "Problem While getting balance list for account  : "
-                        + accountId + " . More info: " + ex.getMessage()));
+                response.status(500);
+                response.body("Problem While getting balance list for account  : "
+                        + accountId + " . More info: " + ex.getMessage());
             }
-        });
+            return response.body();
+        }, new JsonTransformer());
+
     }
 
     @Override
@@ -70,18 +84,33 @@ public class MybankApiImpl implements MybankApi {
                 moneyTransferDTO = gson.fromJson(request.body(), MoneyTransferDTO.class);
                 TransferDetail transferDetail = moneyService.transfer(moneyTransferDTO);
                 if (transferDetail.getStatus().equals(Status.SUCCESS)) {
-                    return gson.toJson(new Response(Status.SUCCESS, gson.toJsonTree(transferDetail)));
+                    response.status(200);
+                    response.body(String.valueOf(new Response(Status.SUCCESS, gson.toJsonTree(transferDetail))));
                 } else {
-                    return gson.toJson(new Response(Status.ERROR, gson.toJsonTree(transferDetail.getErrorMessage())));
+                    response.status(500);
+                    response.body(String.valueOf(new Response(Status.ERROR, gson.toJsonTree(transferDetail.getErrorMessage()))));
                 }
             } catch (Exception ex) {
-                return toJsonElement(new Response(Status.ERROR, "Problem While transferring money. More info: ")
+                response.status(500);
+                response.body(new Response(Status.ERROR, "Problem While transferring money. More info: ")
                         + ex.getMessage());
             }
-        });
+            return response.body();
+        }, new JsonTransformer());
     }
 
     private JsonElement toJsonElement(Object response) {
         return gson.toJsonTree(response);
+    }
+
+    class JsonTransformer implements ResponseTransformer {
+
+        private Gson gson = new Gson();
+
+        @Override
+        public String render(Object model) {
+            return gson.toJson(model);
+        }
+
     }
 }
