@@ -29,8 +29,8 @@ public class Application {
     }
 
     private void setupEndpoints(MybankApi mybankApi) {
-        mybankApi.findBalanceForAccountId();
-        mybankApi.transfer();
-        mybankApi.getCustomers();
+        mybankApi.registerFindBalanceForAccountIdAPI();
+        mybankApi.registerTransferAPI();
+        mybankApi.registerGetCustomersAPI();
     }
 }

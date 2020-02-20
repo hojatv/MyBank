@@ -1,7 +1,7 @@
 package org.simplebank.controller;
 
 public interface MybankApi {
-    void getCustomers();
-    void findBalanceForAccountId();
-    void transfer();
+    void registerGetCustomersAPI();
+    void registerFindBalanceForAccountIdAPI();
+    void registerTransferAPI();
 }
